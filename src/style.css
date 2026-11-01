@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&family=Geist:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&display=swap');
+
+@import "tailwindcss";
+
+
+:root {
+  font: 18px/145% sans-serif;
+  letter-spacing: 0.18px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+@theme {
+  --font-main: 'Geist', sans-serif;
+  --font-alt: 'Parkinsans', sans-serif;
+  --font-mono: 'Geist Mono', monospace;
+}
+
+body {
+  @apply font-main m-0 bg-gray-950 text-white;
+}
+
+.mainCard {
+  @apply overflow-scroll flex flex-col mx-auto my-auto w-full max-w-3xl rounded-3xl md:rounded-4xl border border-gray-500/25 bg-gray-900 p-8 sm:p-10;
+}
+
+.navButton {
+  @apply text-sm py-3 px-6 bg-gray-800 rounded-xl cursor-pointer flex gap-2 justify-center items-center opacity-100 disabled:opacity-50 disabled:cursor-not-allowed;
+}
